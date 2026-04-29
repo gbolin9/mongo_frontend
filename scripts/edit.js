@@ -3,7 +3,7 @@ addEventListener("DOMContentLoaded", async function(){
     const urlparam = new URLSearchParams(this.window.location.search)
     const songID = urlparam.get('id')
 
-    const response = await fetch("http://localhost:3000/api/songs/" + songID)
+    const response = await fetch("https://mongo-backend-2pz3.onrender.com/api/songs/" + songID)
     if (response.ok) {
         let song = await response.json();
   
